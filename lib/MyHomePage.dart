@@ -19,6 +19,11 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void goToTermsAndConditions() async {
+    var result = await Navigator.push(context, MaterialPageRoute(builder: (context) => TermsAndConditionsPage(title: '$_counter',)));
+    print(result['didAccept']);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             MaterialButton(child: Text('Go to next screen'),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => TermsAndConditionsPage(title: '$_counter',)));
+                  goToTermsAndConditions();
                 })
           ],
         ),

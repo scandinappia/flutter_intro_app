@@ -12,6 +12,7 @@ class TermsAndConditionsPage extends StatefulWidget {
 
 class TermsAndConditionsPageState extends State<TermsAndConditionsPage> {
 
+  final switchWidget = SwitchWidget(title: 'Do you accept the terms and conditions?',);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,10 +23,10 @@ class TermsAndConditionsPageState extends State<TermsAndConditionsPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SwitchWidget(title: 'Do you accept the terms and conditions?',),
+            switchWidget,
             MaterialButton(child: Text('Go back'),
                 onPressed: () {
-                    Navigator.of(context).pop();
+                    Navigator.of(context).pop({"didAccept":switchWidget.isOn});
                 })
           ],
         ),
