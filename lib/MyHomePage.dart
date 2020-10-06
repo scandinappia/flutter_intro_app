@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intro_app/TermsAndConditionsPage.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -37,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             MaterialButton(child: Text('Go to next screen'),
                 onPressed: () {
-
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => TermsAndConditionsPage(title: '$_counter',)));
                 })
           ],
         ),
