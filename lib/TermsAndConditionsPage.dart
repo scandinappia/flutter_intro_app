@@ -25,7 +25,7 @@ class TermsAndConditionsPageState extends State<TermsAndConditionsPage> {
             SwitchWidget(title: 'Do you accept the terms and conditions?',),
             MaterialButton(child: Text('Go back'),
                 onPressed: () {
-
+                    Navigator.of(context).pop();
                 })
           ],
         ),

@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'MyHomePage'),
+      routes: <String, WidgetBuilder> {
+        'TermsAndConditions' : (BuildContext context) => TermsAndConditionsPage(title: 'Terms and  Conditions Page',)
+      },
     );
   }
 }
